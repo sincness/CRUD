@@ -14,22 +14,22 @@ include_once "alternate/db.php";
 
 if (isset($_POST['Submit'])) {
     $name = $_POST['name'];
-    $pass = $_POST['pass'];
     $email = $_POST['email'];
+    $pass = $_POST['pass'];
 
     // checking empty fields
-    if (empty($name) || empty($pass) || empty($email)) {
+    if (empty($name) || empty($email) || empty($pass)) {
 
         if (empty($name)) {
             echo "<font color='red'>Name field is empty.</font><br/>";
         }
 
-        if (empty($pass)) {
-            echo "<font color='red'>Password field is empty.</font><br/>";
-        }
-
         if (empty($email)) {
             echo "<font color='red'>Email field is empty.</font><br/>";
+        }
+
+        if (empty($pass)) {
+            echo "<font color='red'>Password field is empty.</font><br/>";
         }
 
         //link to the previous page
@@ -38,12 +38,12 @@ if (isset($_POST['Submit'])) {
         // if all the fields are filled (not empty)
 
         //insert data to database
-        $sql = "INSERT INTO users(username, password, email) VALUES(:name, :pass, :email)";
+        $sql = "INSERT INTO users(username, email, password) VALUES(:name, :email, :pass)";
         $query = $dbConn->prepare($sql);
 
         $query->bindparam(':name', $name);
-        $query->bindparam(':pass', $pass);
         $query->bindparam(':email', $email);
+        $query->bindparam(':pass', $pass);
         $query->execute();
 
         // Alternative to above bindparam and execute
