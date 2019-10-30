@@ -6,7 +6,7 @@ This file is included in all PHP pages where database connection is necessary. -
 $host = 'localhost';
 $dbname = 'crud';
 $user = 'root';
-$pass = 'root';
+$pass = '';
 
 try {
     // http://php.net/manual/en/pdo.connections.php
