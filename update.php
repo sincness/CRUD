@@ -1,4 +1,3 @@
-
 <?php
 
 include ('alternate/db.php');
