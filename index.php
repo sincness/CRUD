@@ -40,5 +40,3 @@ $result = $dbConn->query('SELECT * FROM users ORDER BY id DESC');
 </body>
 </html>
 
-
-
