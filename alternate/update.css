@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+}
+
+table {
+    display: inline-table;
+    margin: 10%;
+}
+
+input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 1em;
+}
+
+.update {
+    background: transparent;
+    border: none;
+    width: 50%;
+}
+
+.cancel {
+    background: transparent;
+    border: none;
+}
+
+th {
+    background: #1B0C81;
+    color: white;
+    padding: 0 .3em;
+    box-shadow: #00000080 0 0 6px 0px;
+}
+
+td {
+    padding: 15px;
+}
+
+tr td:nth-child(4) {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+th:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+th:nth-child(4) {
+    border-radius: 0 10px 0 0;
+}
+
+tfoot td {
+    background: #1B0C81;
+    color: transparent;
+    padding: 0 !important;
+    box-shadow: #00000080 0 0 6px 0px;
+
+}
+
+tfoot td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+tfoot td:nth-child(4) {
+    border-radius: 0 0 10px 0;
+}
+
+.update i {
+    transition: color .3s linear;
+    font-size: 1.5em;
+
+}
+
+.update i:hover {
+    color: #00c900 !important;
+
+}
+
+.delete i {
+    transition: color .3s linear;
+    font-size: 1em;
+}
+
+
+i:nth-child(even):hover {
+    color:black;
+}
+
+.delete i:hover {
+    color: red;
+}
