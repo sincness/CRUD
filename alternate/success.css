@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a, p {
+    display: grid;
+    justify-content: center;
+    align-self: center;
+    color: #fff;
+}
+
+.wrapper {
+    margin: 0 auto;
+    height: 20%;
+    width: 30%;
+    border-radius: 15px;
+    background: #1B0C81;
+    margin-top: 15em;
+}
+
+.messages {
+    height: 20%;
+    width: 30%;
+    margin: 15em auto 0;
+    background: #eee;
+    border: 4px solid #269316;
+    box-shadow: #00000080 0 0 6px 0px;
+    border-radius: 15px;
+}
+
+.messages font, .messages a {
+    color: #269316;
+    display: flex;
+    justify-content: center;
+}
+
+.errors {
+    margin: 15em auto 0;
+    height: 20%;
+    width: 30%;
+    background: #eee;
+    border: 4px solid red;
+    box-shadow: #00000080 0 0 6px 0px;
+    border-radius: 15px;
+    animation:errors 1.5s 1;
+    -webkit-animation:errors 1.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay:3s;
+    -webkit-animation-delay:3s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+.errors font, .errors a {
+    font-size: 1em;
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes errors {
+    100% {opacity: .3;}
+}
+
+@-webkit-keyframes errors {
+    100% {opacity: .3;}
+}
